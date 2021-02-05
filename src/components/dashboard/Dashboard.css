@@ -6,6 +6,8 @@
   /* justify-content: space-between; */
 }
 
+/* ---- apps bar ---- */
+
 #dashboard > #dashboard-apps {
   width: 80px;
   background-color: #1b1b1b;
@@ -33,6 +35,8 @@
 #dashboard > #dashboard-apps > .apps-item.active {
   background-color: #212121;
 }
+
+/* ---- board bar ---- */
 
 #dashboard > #dashboard-board {
   width: 260px;

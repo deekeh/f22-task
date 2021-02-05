@@ -9,15 +9,10 @@ const Apps = () => {
     <>
       <div id="dashboard-apps" className="dashboard-item">
         <div className="apps-item">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="#c3c3c3"
-            class="bi bi-three-dots-vertical"
-            viewBox="0 0 16 16"
-          >
-            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+          <svg fill="#c3c3c3" viewBox="0 0 100 80" width="32" height="32">
+            <rect width="100" height="10"></rect>
+            <rect y="30" width="100" height="10"></rect>
+            <rect y="60" width="70" height="10"></rect>
           </svg>
         </div>
         <div className="apps-item">
