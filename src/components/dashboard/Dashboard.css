@@ -26,7 +26,7 @@
   /* border-bottom: solid 1px #f1f1f1; */
 }
 #dashboard > #dashboard-apps > .apps-item:first-child {
-  border-bottom: solid 4px #252525;
+  border-bottom: solid 4px #303030;
 }
 #dashboard > #dashboard-apps > .apps-item:hover {
   background-color: #212121;
@@ -50,7 +50,7 @@
   align-items: center;
 
   height: 80px;
-  border-bottom: solid 4px #252525;
+  border-bottom: solid 4px #303030;
 }
 
 #dashboard > #dashboard-board > #b-options > .b-option {
@@ -66,10 +66,58 @@
   cursor: pointer;
 }
 
+/* chats bar */
+
 #dashboard > #dashboard-chats {
   width: 300px;
   background-color: #252525;
 }
+
+#dashboard > #dashboard-chats > #c-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
+  border-bottom: solid 4px #303030;
+}
+
+#dashboard > #dashboard-chats > #c-chats > .c {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#dashboard > #dashboard-chats > #c-chats > .c:hover {
+  background-color: #303030;
+  cursor: pointer;
+}
+
+#dashboard > #dashboard-chats > #c-chats > .c > .c-text {
+  width: 100%;
+}
+
+#dashboard > #dashboard-chats > #c-chats > .c > .c-text > .c-name {
+  font-size: 0.8rem;
+}
+
+#dashboard > #dashboard-chats > #c-chats > .c > .c-text > .c-msg {
+  font-size: 0.7rem;
+}
+
+#dashboard > #dashboard-chats > #c-chats > .c > .c-menu {
+  width: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#dashboard > #dashboard-chats > #c-chats > .c > .c-menu > .c-duration {
+  font-size: 0.5rem;
+}
+
+/* deatil chat bar */
 
 #dashboard > #dashboard-detail-chat {
   width: calc(100vw - 700px);
