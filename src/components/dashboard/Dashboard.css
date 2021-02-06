@@ -43,6 +43,29 @@
   background-color: #212121;
 }
 
+#dashboard > #dashboard-board #b-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
+  border-bottom: solid 4px #252525;
+}
+
+#dashboard > #dashboard-board > #b-options > .b-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-size: 0.9rem;
+}
+
+#dashboard > #dashboard-board > #b-options > .b-option:hover {
+  background-color: #1b1b1b;
+  cursor: pointer;
+}
+
 #dashboard > #dashboard-chats {
   width: 300px;
   background-color: #252525;
