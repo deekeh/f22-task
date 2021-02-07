@@ -175,8 +175,46 @@
 
 #dashboard > #dashboard-detail-chat > #dc-content > .dc-messages {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%;
+}
+
+#dashboard
+  > #dashboard-detail-chat
+  > #dc-content
+  > .dc-messages
+  > .dc-message-box {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+#dashboard
+  > #dashboard-detail-chat
+  > #dc-content
+  > .dc-messages
+  > .dc-message-box-receive {
+  flex-direction: row;
+}
+#dashboard
+  > #dashboard-detail-chat
+  > #dc-content
+  > .dc-messages
+  > .dc-message-box-send {
+  /* display: flex; */
+  flex-direction: row-reverse;
+  /* align-items: center; */
+}
+
+#dashboard
+  > #dashboard-detail-chat
+  > #dc-content
+  > .dc-messages
+  > .dc-message-box
+  > .dc-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #dashboard > #dashboard-detail-chat > #dc-content > .dc-reply {
@@ -209,8 +247,6 @@
 }
 
 #dashboard > #dashboard-detail-chat > #dc-content > .dc-reply > #dc-send {
-  /* height: 50px;
-  width: 50px; */
   background-color: #3bc249;
 
   display: flex;

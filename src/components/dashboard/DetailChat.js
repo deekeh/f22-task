@@ -1,3 +1,43 @@
+const MessageBox = (props) => {
+  return (
+    <div
+      className={
+        props.receive
+          ? "dc-message-box dc-message-box-receive my-1"
+          : "dc-message-box dc-message-box-send my-1"
+      }
+    >
+      <div className="dc-profile mx-2">
+        <img
+          src={
+            props.receive
+              ? "https://loremflickr.com/g/240/240/portrait"
+              : "https://loremflickr.com/g/240/240/girl"
+          }
+          width="32"
+          alt=""
+        />
+        <span class="profile-time">14.32</span>
+      </div>
+      <div id="dc-message">
+        <div
+          className={
+            props.receive
+              ? "message-text bg-light p-2 rounded"
+              : "message-text bg-success p-2 rounded"
+          }
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+          sapiente! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Ex, vitae sed! Aspernatur laboriosam ratione minima libero quidem
+          autem fuga vel esse provident dicta. Sunt est non sequi, ad expedita
+          odit?
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const DetailChat = () => {
   return (
     <div id="dashboard-detail-chat">
@@ -46,7 +86,12 @@ const DetailChat = () => {
       </div>
 
       <div id="dc-content" className>
-        <div className="dc-messages"></div>
+        <div className="dc-messages mt-4 px-3">
+          <MessageBox receive={true}></MessageBox>
+          <MessageBox receive={false}></MessageBox>
+          <MessageBox receive={false}></MessageBox>
+          <MessageBox receive={true}></MessageBox>
+        </div>
         <div className="dc-reply px-3">
           <div id="dc-link">
             <svg
