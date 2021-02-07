@@ -40,14 +40,17 @@
 
 #dashboard > #dashboard-board {
   /* width: 260px; */
+  /* min-width: 260px; */
   background-color: #212121;
 }
 #dashboard > .dashboard-board-show {
   width: 260px;
+  min-width: 260px;
   transition-duration: 0.1s;
 }
 #dashboard > .dashboard-board-hide {
   width: 0;
+  min-width: 0;
   transition-duration: 0.1s;
 }
 
@@ -81,18 +84,21 @@
 }
 
 #dashboard > #dashboard-chats {
-  width: 300px;
+  /* width: 300px;
+  min-width: 300px; */
   background-color: #252525;
 }
 #dashboard > .dashboard-chats-show {
-  /* width: 300px; */
-  display: block;
-  /* transition-duration: 0.1s; */
+  width: 300px;
+  min-width: 300px;
+  /* display: block; */
+  transition-duration: 0.1s;
 }
 #dashboard > .dashboard-chats-hide {
-  /* width: 0; */
-  display: none;
-  /* transition-duration: 0.1s; */
+  width: 0;
+  min-width: 0;
+  /* display: none; */
+  transition-duration: 0.1s;
 }
 
 #dashboard > #dashboard-chats > #c-header {
@@ -148,7 +154,7 @@
 
 #dashboard > #dashboard-detail-chat {
   /* width: calc(100vw - 700px); */
-  width: 700px;
+  width: 100%;
   background-color: #f1f1f1;
 }
 /* #dashboard > .dashboard-detail-chat-show {
