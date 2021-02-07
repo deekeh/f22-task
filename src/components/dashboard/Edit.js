@@ -51,7 +51,7 @@ const Edit = () => {
           </div>
         </div>
 
-        <div id="e-profile" class="px-4 mt-4">
+        <div id="e-profile" className="px-4 mt-4">
           <img
             src="https://loremflickr.com/g/240/240/portrait"
             alt="profile-pic"

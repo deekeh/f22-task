@@ -16,22 +16,21 @@ const MessageBox = (props) => {
           }
           width="32"
           alt=""
+          className="rounded-circle"
         />
-        <span class="profile-time">14.32</span>
+        <span style={{ fontSize: "0.7rem" }} className="profile-time">
+          14.32
+        </span>
       </div>
-      <div id="dc-message">
+      <div className="dc-message">
         <div
           className={
             props.receive
               ? "message-text bg-light p-2 rounded"
-              : "message-text bg-success p-2 rounded"
+              : "message-text bg-success text-light p-2 rounded"
           }
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
-          sapiente! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Ex, vitae sed! Aspernatur laboriosam ratione minima libero quidem
-          autem fuga vel esse provident dicta. Sunt est non sequi, ad expedita
-          odit?
+          {props.msg}
         </div>
       </div>
     </div>
@@ -39,6 +38,31 @@ const MessageBox = (props) => {
 };
 
 const DetailChat = () => {
+  const conversation = [
+    {
+      receive: true,
+      message: "Jo what's a nice chilled movie I can go watch with my mom?",
+    },
+    {
+      receive: false,
+      message:
+        "Well there's a few showing at the moment. Do you mind a romance drama type of movie?",
+    },
+    {
+      receive: true,
+      message: "Yeah man that should be fine.",
+    },
+    {
+      receive: false,
+      message:
+        "Okay great. You should check out 50 shades - don't watch the trailer - it will spoil the movie for you. It has some adorable moments.",
+    },
+    {
+      receive: false,
+      message:
+        "Fifty Shades of Grey is a 2011 erotic romance novel by British author E. L. James. It is the first instalment in the Fifty Shades trilogy that traces the deepening...",
+    },
+  ];
   return (
     <div id="dashboard-detail-chat">
       <div id="dc-header">
@@ -78,7 +102,7 @@ const DetailChat = () => {
             id="dc-video"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175l3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"
             />
           </svg>
@@ -86,11 +110,10 @@ const DetailChat = () => {
       </div>
 
       <div id="dc-content" className>
-        <div className="dc-messages mt-4 px-3">
-          <MessageBox receive={true}></MessageBox>
-          <MessageBox receive={false}></MessageBox>
-          <MessageBox receive={false}></MessageBox>
-          <MessageBox receive={true}></MessageBox>
+        <div className="dc-messages my-4 px-3">
+          {conversation.map((c, index) => (
+            <MessageBox msg={c.message} receive={c.receive} key={index} />
+          ))}
         </div>
         <div className="dc-reply px-3">
           <div id="dc-link">
@@ -133,11 +156,11 @@ const DetailChat = () => {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              strokeWidth="2"
               stroke="#ffffff"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" />
               <line x1="10" y1="14" x2="21" y2="3" />

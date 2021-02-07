@@ -176,7 +176,8 @@
 #dashboard > #dashboard-detail-chat > #dc-content > .dc-messages {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100vh - 180px);
+  overflow-y: scroll;
 }
 
 #dashboard
@@ -200,9 +201,7 @@
   > #dc-content
   > .dc-messages
   > .dc-message-box-send {
-  /* display: flex; */
   flex-direction: row-reverse;
-  /* align-items: center; */
 }
 
 #dashboard
@@ -215,6 +214,15 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+#dashboard
+  > #dashboard-detail-chat
+  > #dc-content
+  > .dc-messages
+  > .dc-message-box
+  > .dc-message {
+  max-width: 450px;
 }
 
 #dashboard > #dashboard-detail-chat > #dc-content > .dc-reply {
