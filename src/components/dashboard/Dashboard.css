@@ -117,14 +117,145 @@
   font-size: 0.5rem;
 }
 
-/* deatil chat bar */
+/* detail chat bar */
 
 #dashboard > #dashboard-detail-chat {
   width: calc(100vw - 700px);
   background-color: #f1f1f1;
 }
 
+#dashboard > #dashboard-detail-chat > #dc-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
+  border-bottom: solid 4px #303030;
+}
+#dashboard > #dashboard-detail-chat > #dc-header > #dc-name:hover {
+  background-color: #d1d1d1;
+  cursor: pointer;
+}
+
+#dashboard > #dashboard-detail-chat > #dc-header > #dc-icons {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  align-content: center;
+}
+
+#dashboard > #dashboard-detail-chat > #dc-header > #dc-icons > #dc-star {
+  width: 80px;
+}
+#dashboard > #dashboard-detail-chat > #dc-header > #dc-icons > #dc-star:hover {
+  cursor: pointer;
+}
+#dashboard > #dashboard-detail-chat > #dc-header > #dc-icons > #dc-voice {
+  width: 80px;
+}
+#dashboard > #dashboard-detail-chat > #dc-header > #dc-icons > #dc-voice:hover {
+  cursor: pointer;
+}
+#dashboard > #dashboard-detail-chat > #dc-header > #dc-icons > #dc-video {
+  width: 80px;
+}
+#dashboard > #dashboard-detail-chat > #dc-header > #dc-icons > #dc-video:hover {
+  cursor: pointer;
+}
+
+/* ---- */
+
+#dashboard > #dashboard-detail-chat > #dc-content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+}
+
+#dashboard > #dashboard-detail-chat > #dc-content > .dc-messages {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#dashboard > #dashboard-detail-chat > #dc-content > .dc-reply {
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dashboard
+  > #dashboard-detail-chat
+  > #dc-content
+  > .dc-reply
+  > #dc-text
+  > input {
+  text-decoration: none;
+  border: none;
+}
+#dashboard
+  > #dashboard-detail-chat
+  > #dc-content
+  > .dc-reply
+  > #dc-text
+  > input:hover {
+  border: solid 1px #3c3c3c;
+}
+
+#dashboard > #dashboard-detail-chat > #dc-content > .dc-reply > #dc-send {
+  /* height: 50px;
+  width: 50px; */
+  background-color: #3bc249;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* edit bar */
+
 #dashboard > #dashboard-edit {
   width: 240px;
   background-color: #ffffff;
+}
+
+#dashboard > #dashboard-edit > #e-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
+  border-bottom: solid 4px #303030;
+}
+
+#dashboard > #dashboard-edit > #e-body > #e-apps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+#dashboard > #dashboard-edit > #e-body > #e-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  /* height: 200px; */
+}
+
+#dashboard > #dashboard-edit > #e-body > #e-about > .e-about-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0.8rem;
 }
