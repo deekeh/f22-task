@@ -39,8 +39,16 @@
 /* ---- board bar ---- */
 
 #dashboard > #dashboard-board {
-  width: 260px;
+  /* width: 260px; */
   background-color: #212121;
+}
+#dashboard > .dashboard-board-show {
+  width: 260px;
+  transition-duration: 0.1s;
+}
+#dashboard > .dashboard-board-hide {
+  width: 0;
+  transition-duration: 0.1s;
 }
 
 #dashboard > #dashboard-board #b-header {
@@ -71,6 +79,14 @@
 #dashboard > #dashboard-chats {
   width: 300px;
   background-color: #252525;
+}
+#dashboard > .dashboard-chats-show {
+  width: 300;
+  /* transition-duration: 0.1s; */
+}
+#dashboard > .dashboard-chats-hide {
+  width: 0;
+  /* transition-duration: 0.1s; */
 }
 
 #dashboard > #dashboard-chats > #c-header {
@@ -123,6 +139,14 @@
   width: calc(100vw - 700px);
   background-color: #f1f1f1;
 }
+/* #dashboard > .dashboard-detail-chat-show {
+  width: 240px;
+  transition-duration: 0.1s;
+}
+#dashboard > .dashboard-detail-chat-hide {
+  width: 0;
+  transition-duration: 0.1s;
+} */
 
 #dashboard > #dashboard-detail-chat > #dc-header {
   display: flex;
@@ -267,6 +291,14 @@
 #dashboard > #dashboard-edit {
   width: 240px;
   background-color: #ffffff;
+}
+#dashboard > .dashboard-edit-show {
+  width: 240px;
+  /* transition-duration: 0.1s; */
+}
+#dashboard > .dashboard-edit-hide {
+  width: 0;
+  /* transition-duration: 0.1s; */
 }
 
 #dashboard > #dashboard-edit > #e-header {

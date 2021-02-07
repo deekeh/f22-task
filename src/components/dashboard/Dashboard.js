@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./Dashboard.css";
 
 // components
@@ -8,10 +10,15 @@ import DetailChat from "./DetailChat";
 import Edit from "./Edit";
 
 const Dashboard = () => {
+  const [boardState, setBoardState] = useState(true);
+  const setBoard = () => {
+    setBoardState(!boardState);
+  };
+
   return (
     <div id="dashboard">
-      <Apps />
-      <Board />
+      <Apps onMenuClicked={setBoard} />
+      <Board bState={boardState} />
       <Chats />
       <DetailChat />
       <Edit />

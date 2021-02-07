@@ -7,7 +7,7 @@ const Option = (props) => {
   );
 };
 
-const Board = () => {
+const Board = (props) => {
   const bOptions = [
     {
       text: "All",
@@ -61,7 +61,10 @@ const Board = () => {
     },
   ];
   return (
-    <div id="dashboard-board">
+    <div
+      id="dashboard-board"
+      className={props.bState ? "dashboard-board-show" : "dashboard-board-hide"}
+    >
       <div id="b-header" className="text-light">
         <h2 id="b-title" className="ml-3">
           Inbox

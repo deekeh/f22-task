@@ -1,14 +1,19 @@
+import { useState } from "react";
+
 // logos
 import whatsapp from "./img/whatsapp.png";
 import gmail from "./img/gmail.png";
 import skype from "./img/skype.png";
 import slack from "./img/slack.png";
 
-const Apps = () => {
+const Apps = (props) => {
+  // const [boardState, setBoardState] = useState(true);
+  // const setBoard = () => setBoardState(!boardState);
+
   return (
     <>
       <div id="dashboard-apps" className="dashboard-item">
-        <div className="apps-item">
+        <div onClick={props.onMenuClicked} className="apps-item">
           <svg fill="#c3c3c3" viewBox="0 0 100 80" width="32" height="32">
             <rect width="100" height="10"></rect>
             <rect y="30" width="100" height="10"></rect>
