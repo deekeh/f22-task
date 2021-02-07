@@ -30,7 +30,7 @@ const Chat = (props) => {
   );
 };
 
-const Chats = () => {
+const Chats = (props) => {
   const chatData = [
     {
       name: "Michelle",
@@ -54,7 +54,10 @@ const Chats = () => {
     },
   ];
   return (
-    <div id="dashboard-chats">
+    <div
+      id="dashboard-chats"
+      className={props.cState ? "dashboard-chats-show" : "dashboard-chats-hide"}
+    >
       <div id="c-header" className="px-3">
         <div className="input-group">
           <span className="input-group-text bg-dark border-dark rounded-0">
@@ -77,7 +80,7 @@ const Chats = () => {
         </div>
       </div>
 
-      <div id="c-chats" className="my-4">
+      <div id="c-chats" className="">
         {chatData.map((chat, index) => (
           <Chat name={chat.name} msg={chat.msg} key={index} />
         ))}

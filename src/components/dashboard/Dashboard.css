@@ -76,16 +76,22 @@
 
 /* chats bar */
 
+#dashboard > #dashboard-chats ::-webkit-scrollbar {
+  background-color: #252525;
+}
+
 #dashboard > #dashboard-chats {
   width: 300px;
   background-color: #252525;
 }
 #dashboard > .dashboard-chats-show {
-  width: 300;
+  /* width: 300px; */
+  display: block;
   /* transition-duration: 0.1s; */
 }
 #dashboard > .dashboard-chats-hide {
-  width: 0;
+  /* width: 0; */
+  display: none;
   /* transition-duration: 0.1s; */
 }
 
@@ -96,6 +102,11 @@
 
   height: 80px;
   border-bottom: solid 4px #303030;
+}
+
+#dashboard > #dashboard-chats > #c-chats {
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
 }
 
 #dashboard > #dashboard-chats > #c-chats > .c {
@@ -136,7 +147,8 @@
 /* detail chat bar */
 
 #dashboard > #dashboard-detail-chat {
-  width: calc(100vw - 700px);
+  /* width: calc(100vw - 700px); */
+  width: 700px;
   background-color: #f1f1f1;
 }
 /* #dashboard > .dashboard-detail-chat-show {
@@ -165,7 +177,6 @@
 #dashboard > #dashboard-detail-chat > #dc-header > #dc-icons {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   align-items: center;
   align-content: center;
 }
@@ -210,7 +221,6 @@
   > .dc-messages
   > .dc-message-box {
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
 }
 #dashboard

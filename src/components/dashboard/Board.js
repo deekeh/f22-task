@@ -62,6 +62,7 @@ const Board = (props) => {
   ];
   return (
     <div
+      onClick={props.onBOptionClicked}
       id="dashboard-board"
       className={props.bState ? "dashboard-board-show" : "dashboard-board-hide"}
     >
@@ -95,7 +96,12 @@ const Board = (props) => {
           bOption.hr ? (
             <hr className="bg-secondary mx-2" key={index} />
           ) : (
-            <Option bText={bOption.text} bNumber={bOption.number} key={index} />
+            <Option
+              onClick={props.onBOptionClicked}
+              bText={bOption.text}
+              bNumber={bOption.number}
+              key={index}
+            />
           )
         )}
       </div>
