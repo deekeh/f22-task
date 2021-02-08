@@ -37,7 +37,7 @@ const MessageBox = (props) => {
   );
 };
 
-const DetailChat = () => {
+const DetailChat = (props) => {
   const conversation = [
     {
       receive: true,
@@ -66,7 +66,7 @@ const DetailChat = () => {
   return (
     <div id="dashboard-detail-chat">
       <div id="dc-header">
-        <div id="dc-name" className="ml-4 p-3">
+        <div id="dc-name" onClick={props.onProfileClicked} className="ml-4 p-3">
           <b>Matt Thompson</b> is typing...
         </div>
         <div id="dc-icons">

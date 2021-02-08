@@ -12,13 +12,17 @@ import Edit from "./Edit";
 const Dashboard = () => {
   const [boardState, setBoardState] = useState(true);
   const [chatsState, setChatsState] = useState(true);
+  const [editState, setEditState] = useState(true);
+
   const setBoard = () => {
     setBoardState(!boardState);
     setChatsState(false);
   };
-
   const setChats = () => {
     setChatsState(!chatsState);
+  };
+  const setEdit = () => {
+    setEditState(!editState);
   };
 
   return (
@@ -26,8 +30,8 @@ const Dashboard = () => {
       <Apps onMenuClicked={setBoard} />
       <Board bState={boardState} onBOptionClicked={setChats} />
       <Chats cState={chatsState} />
-      <DetailChat />
-      <Edit />
+      <DetailChat onProfileClicked={setEdit} />
+      <Edit eState={editState} />
     </div>
   );
 };

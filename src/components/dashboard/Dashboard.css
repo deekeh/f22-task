@@ -262,7 +262,7 @@
   > .dc-messages
   > .dc-message-box
   > .dc-message {
-  max-width: 450px;
+  max-width: 70%;
 }
 
 #dashboard > #dashboard-detail-chat > #dc-content > .dc-reply {
@@ -309,12 +309,16 @@
   background-color: #ffffff;
 }
 #dashboard > .dashboard-edit-show {
-  width: 240px;
-  /* transition-duration: 0.1s; */
+  /* width: 240px;
+  min-width: 240px; */
+  display: block;
+  transition-duration: 0.1s;
 }
 #dashboard > .dashboard-edit-hide {
-  width: 0;
-  /* transition-duration: 0.1s; */
+  /* width: 0;
+  min-width: 0; */
+  display: none;
+  transition-duration: 0.1s;
 }
 
 #dashboard > #dashboard-edit > #e-header {

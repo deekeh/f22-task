@@ -2,9 +2,12 @@ import gmail from "./img/gmail.png";
 
 import { Dropdown } from "react-bootstrap";
 
-const Edit = () => {
+const Edit = (props) => {
   return (
-    <div id="dashboard-edit">
+    <div
+      id="dashboard-edit"
+      className={props.eState ? "dashboard-edit-show" : "dashboard-edit-hide"}
+    >
       <div id="e-header">
         <div id="e-notif" className="ml-3">
           <svg
