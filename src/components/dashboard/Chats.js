@@ -1,14 +1,14 @@
+import { useState } from "react";
+
 const Chat = (props) => {
   return (
     <div className="c p-3">
-      {/* <div className="c-photo"> */}
       <img
         src="https://loremflickr.com/g/32/32/people"
         width="32"
         alt="profie-pic"
         className="rounded-circle"
       />
-      {/* </div> */}
       <div className="c-text text-light mx-2">
         <div className="c-name">{props.name}</div>
         <div className="c-msg">{props.msg}</div>
@@ -53,36 +53,27 @@ const Chats = (props) => {
       msg: "Tell Matt I'm going to be late.",
     },
   ];
+
+  const [searchChatData, setSearchChatData] = useState([...chatData]);
+
+  const getChatNames = (e) => {
+    let searchedChat = [];
+    chatData.forEach((chat) => {
+      if (chat.name.toLowerCase().search(e.target.value.toLowerCase()) != -1) {
+        searchedChat.push(chat);
+      }
+    });
+    setSearchChatData(searchedChat);
+  };
+
   return (
     <div
       id="dashboard-chats"
       className={props.cState ? "dashboard-chats-show" : "dashboard-chats-hide"}
     >
       <div id="c-header" className="px-3">
-        {/* <div className="input-group">
-          <span className="input-group-text bg-dark border-dark rounded-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-search"
-              viewBox="0 0 16 16"
-            >
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-            </svg>
-          </span>
-          <input
-            className="form-control bg-dark border-dark rounded-0 text-light"
-            type="text"
-            placeholder="Search"
-          />
-        </div> */}
         <div className="d-flex border rounded">
-          <span
-            // style={{ width: "32px", height: "32px" }}
-            className="input-group-text bg-light text-light border-light rounded-0"
-          >
+          <span className="input-group-text bg-light text-light border-light rounded-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -99,12 +90,13 @@ const Chats = (props) => {
             className="bg-dark text-light form-control rounded border-none"
             style={{ border: "none" }}
             placeholder="Search..."
+            onChange={getChatNames}
           />
         </div>
       </div>
 
       <div id="c-chats" className="">
-        {chatData.map((chat, index) => (
+        {searchChatData.map((chat, index) => (
           <Chat name={chat.name} msg={chat.msg} key={index} />
         ))}
       </div>
